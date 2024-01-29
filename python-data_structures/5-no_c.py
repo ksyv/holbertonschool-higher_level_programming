@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 def no_c(my_string):
     """remove all characters c and C from a string
         my_string is the traited string"""
