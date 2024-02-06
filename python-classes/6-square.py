@@ -4,7 +4,7 @@
 
 class Square:
     """class that defines a square"""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """init a new square"""
         self.size = size
         self.position = position
@@ -22,12 +22,12 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
- 
+
     @property
     def position(self):
         """ retrieve the position of the square"""
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """ define if position is a tuple of two positive integers"""
@@ -42,15 +42,15 @@ class Square:
     def area(self):
         """ define the area of a square entrer in argument"""
         return (self.__size ** 2)
-    
+
     def my_print(self):
         """print in stdout a # square of size __size"""
         if self.__size == 0:
             print("")
         else:
             print("" * self.__position[1])
-            for index in range(0, self.__size): 
+            for index in range(0, self.__size):
                 print(" " * self.__position[0], end="")
-                for index2 in range(0, self.__size):   
+                for index2 in range(0, self.__size):
                     print("#", end="")
                 print("")
