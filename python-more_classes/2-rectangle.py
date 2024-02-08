@@ -41,8 +41,8 @@ class Rectangle:
         """ define the area of a rectangle entrer in argument"""
         return (self.__height * self.__width)
 
-    def perimetre(self):
-        """ define the perimetre of a rectangle entre in arg"""
+    def perimeter(self):
+        """ define the perimeter of a rectangle entre in arg"""
         if self.__height == 0 or self.__width == 0:
             return 0
         return ((self.__height + self.__width) * 2)
