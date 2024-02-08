@@ -33,3 +33,8 @@ class test_max_integer(unittest.TestCase):
         # test if list contain only one number
         only = [5]
         self.assertEqual(max_integer(only), 5)
+    
+    def test_floats(self):
+        """Test a list of floats."""
+        floats = [1.53, 6.33, -9.123, 15.2, 6.0]
+        self.assertEqual(max_integer(floats), 15.2)
