@@ -35,4 +35,7 @@ Traceback (most recent call last):
 ...
 NameError: name 'atchoum' is not defined
 
-overflow
+>>> add_integer(float("inf"), 10)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
