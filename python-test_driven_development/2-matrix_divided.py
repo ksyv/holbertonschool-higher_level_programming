@@ -17,7 +17,8 @@ def matrix_divided(matrix, div):
             raise TypeError('Each row of the matrix must have the same size')
         for number in row:
             if not isinstance(number, (int, float)):
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError('matrix must be a matrix \
+                                (list of lists) of integers/floats')
             temporary_array.append(round(number / div, 2))
         new_matrix.append(temporary_array)
         temporary_array = []
