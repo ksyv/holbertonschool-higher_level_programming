@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""square modul"""
+"""rectangle modul"""
 
 
 class Rectangle:
@@ -11,10 +11,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """retrieve width of rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """def if width is an int >= 0"""
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -23,10 +25,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """retrieve height of rectangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """def if height is an int >= 0"""
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
