@@ -51,6 +51,6 @@ class Rectangle:
         """init print of rect"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        for line in range(self.__height):
+        for line in range(self.__height - 1):
             print("#" * self.__width)
         return ("#" * self.__width)
