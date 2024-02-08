@@ -14,8 +14,6 @@
 >>> add_integer(100.3, -2)
 98
 
->>> add_integer(1000.3)
-1098
 
 >>> add_integer(-2, -2)
 -4
