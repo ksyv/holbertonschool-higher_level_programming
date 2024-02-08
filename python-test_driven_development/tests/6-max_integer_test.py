@@ -46,3 +46,4 @@ class TestMaxInteger(unittest.TestCase):
         """Test if nothing is given"""
         with self.assertRaises(Exception):
             max_integer(1)
+            
