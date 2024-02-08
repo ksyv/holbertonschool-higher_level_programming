@@ -4,19 +4,30 @@ a text with 2 new lines after each of these characters: ., ? and :"""
 
 
 def text_indentation(text):
-    """run text and replace specfied char and space by 2 new line"""
+    """Print text with two new lines after each '.', '?', and ':'.
+
+    Args:
+        text (string): The text to print.
+    Raises:
+        TypeError: If text is not a string.
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    specify_char = ['.', '?', ':', ',']
-    first_char = 0
-    index = 0
-    for test_char in text:
-        if test_char in specify_char:
-            char_index = index + 1
-            print("{}\n".format(text[first_char:char_index]))
-            first_char = char_index + 1
-        index += 1
 
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
+
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
+            continue
+        c += 1
 
 if __name__ == '__main__':
     import doctest
