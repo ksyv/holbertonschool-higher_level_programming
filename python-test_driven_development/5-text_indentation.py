@@ -16,3 +16,7 @@ def text_indentation(text):
             print("{}\n".format(text[first_char:char_index]))
             first_char = char_index + 1
         index += 1
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testfile("tests/5-text_indentation.txt")
