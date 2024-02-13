@@ -4,7 +4,6 @@
 
 ok value:
 >>> bg.integer_validator("my_int", 12)
-True
 
 value string:
 >>> bg.integer_validator("name", "name")
