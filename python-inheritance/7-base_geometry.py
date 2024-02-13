@@ -3,26 +3,26 @@
 
 
 class BaseGeometry:
-    """_summary_
+    """ Write a class BaseGeometry (based on 6-base_geometry.py).
     """
     def area(self):
-        """_summary_
+        """ that raises an Exception
 
         Raises:
-            Exception: _description_
+            Exception: area() is not implemented
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """_summary_
+        """that validates value
 
         Args:
-            name (_type_): _description_
-            value (_type_): _description_
+            name (_type_):  is always a string
+            value (_type_): do is an integer up to 0
 
         Raises:
-            TypeError: _description_
-            ValueError: _description_
+            TypeError: <name> must be an integer
+            ValueError: <name> must be greater than 0
         """
         if type(value) != int:
             raise TypeError(f"{name} must be an integer")
