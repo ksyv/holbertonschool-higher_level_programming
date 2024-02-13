@@ -2,6 +2,9 @@
 
 >>> bg = BaseGeometry()
 
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
+
 ok value:
 >>> bg.integer_validator("my_int", 12)
 
