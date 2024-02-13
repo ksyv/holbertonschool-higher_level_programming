@@ -44,3 +44,5 @@ Traceback (most recent call last):
 ...
 NameError: name 'Nan' is not defined
 
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
