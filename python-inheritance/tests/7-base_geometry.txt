@@ -75,5 +75,5 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 
 >>> bg.integer_validator(name,3)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
+...
 NameError: name 'name' is not defined
