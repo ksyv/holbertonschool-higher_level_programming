@@ -32,6 +32,18 @@ Traceback (most recent call last):
 ...
 TypeError: name must be an integer
 
+value tuple:
+>>> bg.integer_validator("name", (1,2))
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+value list:
+>>> bg.integer_validator("name", [1])
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
 value None:
 >>> bg.integer_validator("name", None)
 Traceback (most recent call last):
@@ -47,3 +59,4 @@ NameError: name 'Nan' is not defined
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
