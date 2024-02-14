@@ -1,3 +1,7 @@
+# Test File: test_basegeometry_invalid.txt
+
+# Description: Testing the BaseGeometry class with invalid input.
+
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 >>> bg = BaseGeometry()
