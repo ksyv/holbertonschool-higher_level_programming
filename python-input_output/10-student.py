@@ -19,7 +19,7 @@ class Student():
         for i in attrs:
             try:
                 new_dic[i] = self.__dict__[i]
-            except:
+            except Exception:
                 pass
 
         return new_dic
