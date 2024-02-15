@@ -76,3 +76,21 @@ TypeError: name must be an integer
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
+### DOCSTRING TEST ###
+
+    >>> modulo_doc = __import__('7-base_geometry').__doc__
+    >>> print(len(modulo_doc) > 0)
+    True
+
+    >>> class_doc = __import__('7-base_geometry').BaseGeometry.__doc__
+    >>> print(len(class_doc) > 0)
+    True
+
+    >>> area_doc = __import__('7-base_geometry').BaseGeometry.area.__doc__
+    >>> print(len(area_doc) > 0)
+    True
+
+    >>> validate_doc = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+    >>> print(len(validate_doc) > 0)
+    True
