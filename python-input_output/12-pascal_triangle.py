@@ -15,6 +15,6 @@ def pascal_triangle(n):
             p_tri[i].append(1)
             for j in range(1, i):
                 p_tri[i].append(p_tri[i - 1][j - 1] + p_tri[i - 1][j])
-            if(i != 0):
+            if (i != 0):
                 p_tri[i].append(1)
     return p_tri
