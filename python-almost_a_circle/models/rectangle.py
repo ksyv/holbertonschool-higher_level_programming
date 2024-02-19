@@ -29,7 +29,12 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """ def width in private attribute"""
+        """ def width in private attribute
+        check if it's a positive integer"""
+        if not isinstance(value, int):
+            raise TypeError('width must be an integer')
+        elif value <= 0:
+            raise ValueError('width must be > 0')
         self.__width = value
 
     @property
@@ -39,7 +44,12 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """ def height in private attribute"""
+        """ def height in private attribute
+        check if it's a positive integer"""
+        if not isinstance(value, int):
+            raise TypeError('height must be an integer')
+        elif value <= 0:
+            raise ValueError('height must be > 0')
         self.__height = value
 
     @property
@@ -49,7 +59,12 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """ def x in private attribute"""
+        """ def x in private attribute
+        check if it's a positive integer or 0"""
+        if not isinstance(value, int):
+            raise TypeError('x must be an integer')
+        elif value < 0:
+            raise ValueError('x must be >= 0')
         self.__x = value
 
     @property
@@ -59,5 +74,10 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """ def y in private attribute"""
+        """ def y in private attribute
+        check if it's a positive integer or 0"""
+        if not isinstance(value, int):
+            raise TypeError('y must be an integer')
+        elif value < 0:
+            raise ValueError('y must be >= 0')
         self.__y = value
