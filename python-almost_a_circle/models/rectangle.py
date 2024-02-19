@@ -88,7 +88,10 @@ class Rectangle(Base):
 
     def display(self):
         """print rectangle instance with "#" """
+        for blankline in range(self.y):
+            print("")
         for index in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
