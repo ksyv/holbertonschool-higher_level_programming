@@ -98,3 +98,22 @@ class Rectangle(Base):
         '''Overwritting the str method'''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
+
+    def update(self, *args):
+        """ assigns an argument to each attribute
+        1st argument should be the id attribute
+        2nd argument should be the width attribute
+        3rd argument should be the height attribute
+        4th argument should be the x attribute
+        5th argument should be the y attribute"""
+        listOfArg = []
+        for arg in args:
+            listOfArg.append(arg)
+        try:
+            self.id = listOfArg[0]
+            self.width = listOfArg[1]
+            self.height = listOfArg[2]
+            self.x = listOfArg[3]
+            self.y = listOfArg[4]
+        except IndexError:
+            pass
