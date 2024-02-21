@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 
 
 class testRectangleCreation(unittest.TestCase):
-    """Tests for check if rectangle instance is created with good arg, 
+    """Tests for check if rectangle instance is created with good arg,
     and Base inheritance"""
     def testInheritance(self):
         self.assertIsInstance(Rectangle(10, 2), Base)
@@ -24,6 +24,7 @@ class testRectangleCreation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(1, 2, 3, 4, 5, 6)
 
+
 class TestRectangleIdIdentation(unittest.TestCase):
     """Tests for check the id attribution of all instance"""
     def testWithoutIDArg(self):
@@ -39,6 +40,7 @@ class TestRectangleIdIdentation(unittest.TestCase):
         rectangle1 = Rectangle(10, 2, 4, 5, 7)
         rectangle1.id = 13
         self.assertEqual(rectangle1.id, 13)
+
 
 if __name__ == "__main__":
     unittest.main()

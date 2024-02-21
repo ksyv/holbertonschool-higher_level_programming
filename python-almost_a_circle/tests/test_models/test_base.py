@@ -42,5 +42,6 @@ class TestIdIdentation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base(1, 2)
 
+
 if __name__ == "__main__":
     unittest.main()
