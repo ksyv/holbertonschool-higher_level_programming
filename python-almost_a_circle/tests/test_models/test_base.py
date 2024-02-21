@@ -6,6 +6,7 @@ from models.base import Base
 
 
 class TestIdIdentation(unittest.TestCase):
+    """Tests for check the id attribution of all instance"""
     def testIdWithoutArg(self):
         base1 = Base()
         base2 = Base()
