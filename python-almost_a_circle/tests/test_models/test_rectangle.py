@@ -25,29 +25,29 @@ class testRectangleCreation(unittest.TestCase):
             Rectangle(1, 2, 3, 4, 5, 6)
 
     def testWithNoIntArg(self):
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             rectangle1 = Rectangle("Str", 2)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
             rectangle1 = Rectangle(2, "Str")
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
             rectangle1 = Rectangle(2, 10, 'Str', 5)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
             rectangle1 = Rectangle(23, 12, 4, 'Str')
 
     def testWithZeroValue(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             rectangle1 = Rectangle(0, 2)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             rectangle1 = Rectangle(2, 0)
 
     def testWithNegativeValue(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             rectangle1 = Rectangle(-1, 2)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             rectangle1 = Rectangle(2, -1)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             rectangle1 = Rectangle(2, 10, -1, 5)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             rectangle1 = Rectangle(23, 12, 4, -1)
 
 
