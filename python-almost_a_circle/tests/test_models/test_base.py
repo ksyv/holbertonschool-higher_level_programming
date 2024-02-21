@@ -39,7 +39,7 @@ class TestIdIdentation(unittest.TestCase):
         self.assertEqual(base1.id, 13)
 
     def testTwoArgs(self):
-        with self.assertRaises(TypeErrorError):
+        with self.assertRaises(TypeError):
             Base(1, 2)
 
 if __name__ == "__main__":
