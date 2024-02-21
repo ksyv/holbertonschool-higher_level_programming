@@ -24,6 +24,32 @@ class testRectangleCreation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(1, 2, 3, 4, 5, 6)
 
+    def testWithNoIntArg(self):
+        with self.assertRaises(TypeError):
+            rectangle1 = Rectangle("Str", 2)
+        with self.assertRaises(TypeError):
+            rectangle1 = Rectangle(2, "Str")
+        with self.assertRaises(TypeError):
+            rectangle1 = Rectangle(2, 10, 'Str', 5)
+        with self.assertRaises(TypeError):
+            rectangle1 = Rectangle(23, 12, 4, 'Str')
+        
+    def testWithZeroValue(self):
+        with self.assertRaises(ValueError):
+            rectangle1 = Rectangle(0, 2)
+        with self.assertRaises(ValueError):
+            rectangle1 = Rectangle(2, 0) 
+
+    def testWithNegativeValue(self):
+        with self.assertRaises(ValueError):
+            rectangle1 = Rectangle(-1, 2)
+        with self.assertRaises(ValueError):
+            rectangle1 = Rectangle(2, -1)
+        with self.assertRaises(ValueError):
+            rectangle1 = Rectangle(2, 10, -1, 5)
+        with self.assertRaises(ValueError):
+            rectangle1 = Rectangle(23, 12, 4, -1) 
+
 
 class TestRectangleIdIdentation(unittest.TestCase):
     """Tests for check the id attribution of all instance"""
