@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """modul for create a Base class"""
 import json
+import os
 
 
 class Base:
@@ -62,7 +63,7 @@ class Base:
     def load_from_file(cls):
         """ returns a list of instances from a json file"""
         filename = cls.__name__ + ".json"
-        if not filename:
+        if not os.path.exists(filename):
             return []
         else:
             with open(filename, 'r') as jsonFileSaved:
