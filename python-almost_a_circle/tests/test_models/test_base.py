@@ -2,7 +2,6 @@
 
 """define unittests for base.py"""
 import unittest
-import json
 from models.base import Base
 
 
@@ -43,13 +42,6 @@ class TestIdIdentation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base(1, 2)
 
-    def setUp(self):
-        """
-        Function to set up a new instance
-        """
-        self.base = Base()
-
-   
 
 if __name__ == "__main__":
     unittest.main()
