@@ -67,7 +67,17 @@ class TestRectangleIdIdentation(unittest.TestCase):
         rectangle1.id = 13
         self.assertEqual(rectangle1.id, 13)
 
-    
+
+class TestRectangleArea(unittest.TestCase):
+    """Tests the area method"""
+    def testArea(self):
+        rectangle1 = Rectangle(10, 2, 0, 0, 0)
+        self.assertEqual(20, rectangle1.area())
+
+    def testAreaWithArg(self):
+        rectangle1 = Rectangle(10, 2, 0, 0, 0)
+        with self.assertRaises(TypeError):
+            rectangle1.area(1)
 
 
 if __name__ == "__main__":
