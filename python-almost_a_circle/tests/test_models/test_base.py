@@ -37,3 +37,6 @@ class TestIdIdentation(unittest.TestCase):
         base1 = Base(12)
         base1.id = 13
         self.assertEqual(base1.id, 13)
+
+if __name__ == "__main__":
+    unittest.main()
