@@ -65,6 +65,6 @@ class Base:
         try:
             with open(filename, 'r') as jsonFileSaved:
                 listOfInstance = Base.from_json_string(jsonFileSaved.read())
-                return (cls.create(**instance) for instance in listOfInstance)
+                return [cls.create(**instance) for instance in listOfInstance]
         except IOError:
             return []
