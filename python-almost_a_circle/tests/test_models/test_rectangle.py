@@ -68,6 +68,41 @@ class TestRectangleIdIdentation(unittest.TestCase):
         self.assertEqual(rectangle1.id, 13)
 
 
+class TestAssertAndSetterRectangle(unittest.TestCase):
+    """verify setter and assert"""
+    def test_heightsetter(self):
+        rectangle = Rectangle(12, 6, 0, 0)
+        rectangle.height = 18
+        self.assertEqual(rectangle.height, 18)
+
+    def test_heightsetterassert(self):
+        self.assertRaises(ValueError, Rectangle, -10, 6, 0, 0)
+    
+    def test_widthsetters(self):
+        rectangle = Rectangle(12, 6, 0, 0)
+        rectangle.width = 36
+        self.assertEqual(rectangle.width, 36)
+
+    def test_widthsetterassert(self):
+        self.assertRaises(ValueError, Rectangle, 10, -6, 0, 0)
+
+    def test_xsetters(self):
+        rectangle = Rectangle(12, 6, 0, 0)
+        rectangle.x = 9
+        self.assertEqual(rectangle.x, 9)
+
+    def test_xsetterassert(self):
+        self.assertRaises(ValueError, Rectangle, 10, 6, -1, 0)
+
+    def test_ysetters(self):
+        rectangle = Rectangle(12, 6, 0, 0)
+        rectangle.y = 3
+        self.assertEqual(rectangle.y, 3)
+
+    def test_ysetterassert(self):
+        self.assertRaises(ValueError, Rectangle, 10, 6, 0, -1)
+
+
 class TestRectangleArea(unittest.TestCase):
     """Tests the area method"""
     def testArea(self):
