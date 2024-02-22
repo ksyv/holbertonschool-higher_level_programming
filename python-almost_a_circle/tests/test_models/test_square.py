@@ -112,6 +112,13 @@ class TestSquareArea(unittest.TestCase):
             square1.area(1)
 
 
+class Test__str__method(unittest.TestCase):
+    """test the str method"""
+    def testReturnOf__str__(self):
+        rectangle1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual("[Rectangle] (12) 2/1 - 4/6", str(rectangle1))
+
+
 class TestupdateSquare(unittest.TestCase):
     """test the update method"""
     def testUpdate(self):
