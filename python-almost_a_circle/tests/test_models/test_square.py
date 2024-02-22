@@ -13,6 +13,9 @@ class testSquareCreation(unittest.TestCase):
     def testInheritance(self):
         self.assertIsInstance(Square(10), Base)
 
+    def testInheritanceOfRectangle(self):
+        self.assertIsInstance(Square(10), Rectangle)
+
     def testWithoutArgs(self):
         with self.assertRaises(TypeError):
             Square()
