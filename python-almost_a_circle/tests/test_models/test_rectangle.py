@@ -77,7 +77,7 @@ class TestAssertAndSetterRectangle(unittest.TestCase):
 
     def test_heightsetterassert(self):
         self.assertRaises(ValueError, Rectangle, -10, 6, 0, 0)
-    
+
     def test_widthsetters(self):
         rectangle = Rectangle(12, 6, 0, 0)
         rectangle.width = 36
