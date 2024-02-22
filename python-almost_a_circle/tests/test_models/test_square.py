@@ -18,7 +18,7 @@ class testSquareCreation(unittest.TestCase):
             Square()
 
     def testOneArg(self):
-            Square(1)
+        Square(1)
 
     def testMoreFourArgs(self):
         with self.assertRaises(TypeError):
@@ -73,6 +73,15 @@ class TestSquareArea(unittest.TestCase):
         with self.assertRaises(TypeError):
             square1.area(1)
 
+
+class TestupdateSquare(unittest.TestCase):
+    """test the update method"""
+    def testUpdate(self):
+        r1 = Square(10, 10, 10)
+        r1.update(89, 2)
+        r1.update(x=1, height=2, y=3, width=4)
+        self.assertEqual([r1.id, r1.width, r1.height, r1.x, r1.y],
+                         [89, 4, 2, 1, 3])
 
 
 if __name__ == "__main__":
