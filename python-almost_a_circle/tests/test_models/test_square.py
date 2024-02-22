@@ -62,6 +62,41 @@ class TestSquareIdIdentation(unittest.TestCase):
         self.assertEqual(square1.id, 13)
 
 
+class TestAssertAndSetterSquare(unittest.TestCase):
+    """verify setter and assert"""
+    def test_heightsetter(self):
+        square = Square(12, 6, 0)
+        square.size = 18
+        self.assertEqual(square.size, 18)
+
+    def test_heightsetterassert(self):
+        self.assertRaises(ValueError, Square, -10, 6, 0, 0)
+
+    def test_widthsetters(self):
+        square = Square(12, 0, 0)
+        square.size = 36
+        self.assertEqual(square.size, 36)
+
+    def test_widthsetterassert(self):
+        self.assertRaises(ValueError, Square, 10, -6, 0, 0)
+
+    def test_xsetters(self):
+        square = Square(12, 6, 0, 0)
+        square.x = 9
+        self.assertEqual(square.x, 9)
+
+    def test_xsetterassert(self):
+        self.assertRaises(ValueError, Square, 6, -1, 0)
+
+    def test_ysetters(self):
+        square = Square(12, 6, 0, 0)
+        square.y = 3
+        self.assertEqual(square.y, 3)
+
+    def test_ysetterassert(self):
+        self.assertRaises(ValueError, Square, 6, 0, -1)
+
+
 class TestSquareArea(unittest.TestCase):
     """Tests the area method"""
     def testArea(self):
