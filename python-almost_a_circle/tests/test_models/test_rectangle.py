@@ -121,7 +121,7 @@ class Test__str__method(unittest.TestCase):
         rectangle1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual("[Rectangle] (12) 2/1 - 4/6", str(rectangle1))
 
-        
+
 class Testupdate(unittest.TestCase):
     """test the update method"""
     def testUpdate(self):
