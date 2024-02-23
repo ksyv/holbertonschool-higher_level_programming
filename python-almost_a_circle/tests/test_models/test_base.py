@@ -43,5 +43,22 @@ class TestIdIdentation(unittest.TestCase):
             Base(1, 2)
 
 
+class TestJsonTraitment(unittest.TestCase):
+    """test json methods of class Base"""
+    def testToJsonStringList(self):
+        self.assertEqual("[]", Base.to_json_string([]))
+
+    def testToJsonStringNone(self):
+        self.assertEqual("[]", Base.to_json_string(None))
+
+    def testToJsonStringWithoutArgs(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string()
+
+    def testToJsonStringMoreThanOneArg(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string([], 1)
+
+
 if __name__ == "__main__":
     unittest.main()
