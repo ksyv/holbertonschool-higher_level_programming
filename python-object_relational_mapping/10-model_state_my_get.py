@@ -21,8 +21,8 @@ def main():
     session = Session()
 
     states_found = session.query(State).filter(State.name == sys.argv[4]).all()
-
     print(states_found[0].id) if len(states_found) else print("Not found")
+
 
 if __name__ == '__main__':
     main()
