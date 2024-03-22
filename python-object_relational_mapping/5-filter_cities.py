@@ -22,10 +22,12 @@ def main():
     cities = cur.fetchall()
     for city in cities:
         print(city[1], end='')
-        if cities.index(city) != len(cities) -1:
+        if cities.index(city) != len(cities) - 1:
             print(", ", end="")
         else:
             print()
+    if not len(cities):
+        print()
 
 
 if __name__ == "__main__":
