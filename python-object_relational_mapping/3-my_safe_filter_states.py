@@ -8,8 +8,11 @@ def main():
     """start of prog"""
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    if (sys.argv[4] == "'"):
-        return
+    state_name = sys.argv[4]
+    escape_strings = ["\x00", "\n", "\r", "\\", "'", '\"', r"\xla"]
+    for i in escape_strings:
+        if i in state_name:
+            return
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name= '{}' \
                 ORDER BY id".format(sys.argv[4]))
