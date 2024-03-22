@@ -1,7 +1,9 @@
 -- script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
-
-SELECT tv_shows.title, SUM(tv_show_rating.rate) as rating
-FROM tv_shows
-JOIN tv_show_ratings ON tv_shows.id = tv_show_ratings.show_id
-GROUP BY tv_shows.title
+SELECT
+s.title AS title, 
+SUM(sr.rate) AS rating
+FROM
+tv_shows AS s
+JOIN tv_show_ratings AS sr ON s.id = sr.show_id
+GROUP BY title
 ORDER BY rating DESC;
